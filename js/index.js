@@ -17,12 +17,13 @@ const startColors = {
   intId: null,
   start() {
     this.intId = setInterval(() => {
-      colors.map((color, ind) => {
-        if (ind === randomIntegerFromInterval(0, ind)) {
-          refs.bodyEl.style.backgroundColor = color;
-        }
-      });
-      console.log('iiii')
+      refs.bodyEl.style.backgroundColor = colors[randomIntegerFromInterval(0, colors.length)];
+      // colors.map((color, ind) => {
+      //   if (ind === randomIntegerFromInterval(0, ind)) {
+      //     refs.bodyEl.style.backgroundColor = color;
+      //   }
+      // });
+    
     }, 1000);
   },
   stop() {
